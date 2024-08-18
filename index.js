@@ -36,7 +36,7 @@ async function run() {
 
 
         // await client.db("admin").command({ ping: 1 });
-        
+
         // user data -----------------------------------------------------------------
         app.post("/users", async (req, res) => {
             const data = req.body;
@@ -56,18 +56,18 @@ async function run() {
             const page = parseInt(req.query.page);
             const size = parseInt(req.query.size);
 
-            // query
+            // query-------
             let query = {
 
             };
 
-            // query by category name
+            // query by category name----
             const category = req.query.category || "";
             if (category) {
                 query.category = category;
             }
 
-            // query by brand name
+            // query by brand name-------
             const brandName = req.query.brandName || "";
             if (brandName) {
                 query.brandName = brandName;
