@@ -74,8 +74,6 @@ async function run() {
                 query.brandName = brandName;
             }
 
-            
-
             // search
             const search = req.query.search || "";
             if (search) {
