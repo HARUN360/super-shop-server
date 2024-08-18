@@ -36,7 +36,8 @@ async function run() {
 
 
         // await client.db("admin").command({ ping: 1 });
-
+        
+        // user data -----------------------------------------------------------------
         app.post("/users", async (req, res) => {
             const data = req.body;
 
@@ -49,7 +50,7 @@ async function run() {
             const result = await megaShop_user_collection.insertOne(data);
             res.send(result)
         })
-
+        // product data --------------------------------------------------------------------
         app.get("/allProducts", async (req, res) => {
 
             const page = parseInt(req.query.page);
