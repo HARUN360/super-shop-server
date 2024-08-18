@@ -51,13 +51,13 @@ async function run() {
             const result = await megaShop_user_collection.insertOne(data);
             res.send(result)
         })
-        // product data --------------------------------------------------------------------
+        // product data ------------------------------------------------------------
         app.get("/allProducts", async (req, res) => {
 
             const page = parseInt(req.query.page);
             const size = parseInt(req.query.size);
 
-            // query-------
+            // query---------
             let query = {
 
             };
@@ -82,7 +82,7 @@ async function run() {
 
 
 
-            // Initialize sorting objects------
+            // Initialize sorting objects
             let price_query = {};
             let sortQuery = {};
 
@@ -105,7 +105,7 @@ async function run() {
             // Merge sorting objects
             const finalSortQuery = { ...price_query, ...sortQuery };
 
-            // Filter by price range------------------------------------------------------------
+            // Filter by price range
             const minPrice = parseFloat(req.query.minPrice) || 0;
             const maxPrice = parseFloat(req.query.maxPrice) || 1000;
             query.price = { $gte: minPrice, $lte: maxPrice };
