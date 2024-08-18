@@ -83,7 +83,7 @@ async function run() {
 
 
 
-            // Initialize sorting objects
+            // Initialize sorting objects------
             let price_query = {};
             let sortQuery = {};
 
